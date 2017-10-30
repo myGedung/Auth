@@ -1,0 +1,60 @@
+{
+    "name": "mygedung/auth",
+    "description": "PHP 7.0+ Fully-featured Authentication & Authorization System",
+    "keywords": [
+        "php",
+        "auth",
+        "security",
+        "codeigniter",
+        "fuelphp",
+        "laravel",
+        "mygedung"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.0.0",
+        "mygedung/support": "~1.0",
+        "illuminate/support": "~5.5"
+    },
+    "require-dev": {
+        "illuminate/cookie": "~5.5",
+        "illuminate/database": "~5.5",
+        "illuminate/events": "~5.5",
+        "illuminate/http": "~5.5",
+        "illuminate/session": "~5.5",
+        "ircmaxell/password-compat": "~1.0",
+        "mockery/mockery": "~1.0",
+        "paragonie/random_compat": "~2.0",
+        "phpunit/phpunit": "~6.4"
+    },
+    "suggest": {
+        "illuminate/database": "By default, Auth utilizes the powerful Illuminate database layer.",
+        "illuminate/events": "To hook into various events across Auth, we recommend using Illuminate's event dispatcher.",
+        "ircmaxell/password-compat": "Default hashing uses PHP 7.0 password_* functions, with forward-compatible support.",
+        "symfony/http-foundation": "Required for native implementations."
+    },
+    "autoload": {
+        "psr-4": {
+            "myGedung\\Auth\\": "src/"
+        }
+    },
+    "extra": {
+        "component": "package",
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "myGedung\\Auth\\Laravel\\AuthServiceProvider"
+            ],
+            "aliases": {
+                "Activation": "myGedung\\Auth\\Laravel\\Facades\\Activation",
+                "Reminder": "myGedung\\Auth\\Laravel\\Facades\\Reminder",
+                "Auth": "myGedung\\Auth\\Laravel\\Facades\\Auth"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
+
